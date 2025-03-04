@@ -18,7 +18,7 @@ public:
         vector<int> result = findNextArray(s);
         int first = result[length - 1];
         int stride = first + 1;
-        // TODO: 这里还不太清楚 
+        // 这里取余等于0排除了重复子串大于length/2的情况，此时可以证明下面的条件为重复子串的充分必要条件
         if((first != 0 || s.length() == 2) && length % (length - stride) == 0 && s[first] == s[length-1]){
             return true;
         }else{
