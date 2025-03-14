@@ -66,6 +66,7 @@ public:
             if(height[i]<height[stack1.top()]){
                 stack1.push(i);
             }else if(height[i]==height[stack1.top()]){
+                // 中间只需要记录一次即可
                 stack1.pop();
                 stack1.push(i);
             }else{
